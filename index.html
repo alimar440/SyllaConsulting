@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS</title>
+  <!-- CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hero-bg {
+        background-image: url('https://images.unsplash.com/photo-1580094333632-438bdc04f79f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+    .contact-bg {
+        background-image: url('https://images.unsplash.com/photo-1520942702018-0862200e6873?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+</style>
+
+</head>
+
+<body>
+
+  <!-- ################## -->
+    <!-- Navigation -->
+  <!-- ################## -->
+
+  <nav class="bg-gray-800 bg-opacity-75-fixed w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <img src="./Logo-02.png" alt="Logo" class="h-8 w-8">
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a href="#acceuil" class="text-gray-300 hover:bg-gray-700 hover:py-2  hover:text-white  px-3  py2  hover:rounded-md  text-sm font-medium  hover:font-bold">
+                Acceuil
+              </a>
+              <a href="#galerie" class="text-gray-300 hover:bg-gray-700 hover:py-2  hover:text-white  px-3  py2  hover:rounded-md  text-sm font-medium  hover:font-bold">
+                Destination
+              </a>
+              <a href="#info" class="text-gray-300 hover:bg-gray-700 hover:py-2  hover:text-white  px-3  py2  hover:rounded-md  text-sm font-medium  hover:font-bold">
+                Offre
+              </a>
+              <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:py-2  hover:text-white  px-3  py2  hover:rounded-md  text-sm font-medium  hover:font-bold">
+                contact
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mr-2 flex md:hidden">
+          <button type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md hover:bg-white focus:outline-none focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white "
+          aria-controls="mobile-menu" aria-expanded="false" id="menu-button">
+          <box-icon name='menu' class="h-6 w-6 " id="menu-icon"></box-icon>
+          <box-icon name='x' class="h-6 w-6 hidden" id="close-icon"></box-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-2">
+        <a href="#" class="text-gray-300 hover:text-white hover:bg-gray-300 px-3 rounded-md block text-base font-medium py-2">Acceuil</a>
+        <a href="#" class="text-gray-300 hover:text-white hover:bg-gray-300 px-3 rounded-md block text-base font-medium py-2">Destination</a>
+        <a href="#" class="text-gray-300 hover:text-white hover:bg-gray-300 px-3 rounded-md block text-base font-medium py-2">Offre</a>
+        <a href="#" class="text-gray-300 hover:text-white hover:bg-gray-300 px-3 rounded-md block text-base font-medium py-2">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+<!-- ##################   -->
+<!-- Hero -->
+<!-- ################## -->
+
+<section id="acceuil" class="relative h-screen selection:bg-gray-700 flex justify-center items-center hero-bg bg-fixed bg-center bg-cover">
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <div class="relative text-center p-6">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">Decouvrez le Monde avec Sylla Consulting </h1>
+    <p class="text-lg md:text-2xl mb-8 text-white">Préparez votre aventure en toute simplicité : Nous vous accompagnons dans vos préinscriptions pour des voyages inoubliables.</p>
+    <button class="bg-red-500 text-white px-6 py-3 rounded-full font-semibold animate-pulse">Demarrer maintenant</button>
+  </div>
+</section> 
+
+<!-- ################## -->
+<!-- Galerie -->
+<!-- ################## -->
+
+<section id="galerie" class="text-center py-8">
+  <h2 class="text-4xl text-red-600 uppercase font-black mb-2">
+    Galerie d'inscription
+  </h2>
+  <p class="text-lg text-gray-600">
+    Choisissez votre destination et commencez votre inscription pour un voyage inoubliable !
+  </p>
+
+  <section class="w-full m-auto max-w-[1200px] p-4" >
+    <div class="grid justify-start grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- card 1 -->
+       <div class=" relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all ">
+        <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJhbmNlfGVufDB8fDB8fHww" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">France</h2>
+          <p class="text-gray-700 mb-4">Faire la preinscription Campus France </p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:blue-600">Postuler</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">150K</div>
+      </div>
+
+
+      <!-- card 2 -->
+
+      
+       <div class=" relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all ">
+        <img src="https://images.unsplash.com/photo-1508693926297-1d61ee3df82a?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q2FuYWRhfGVufDB8fDB8fHww" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">🇨🇦 Canada</h2>
+          <p class="text-gray-700 mb-4">Obtenez un accompagnement complet pour votre admission au Canada.</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:blue-600">Postuler</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">150K</div>
+      </div>
+
+
+      <!-- card 3 -->
+
+
+       <div class=" relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all ">
+        <img src="https://images.unsplash.com/photo-1601993305512-a73859a41ec2?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8QmVsZ2lxdWV8ZW58MHx8MHx8fDA%3D" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Belgique</h2>
+          <p class="text-gray-700 mb-4">Nous vous guidons dans vos démarches pour étudier en Belgique.</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:blue-600">Postuler</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">150K</div>
+      </div>
+
+
+      <!-- card 4 -->
+
+
+       <div class=" relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all ">
+        <img src="https://images.unsplash.com/photo-1524099163253-32b7f0256868?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">États-Unis</h2>
+          <p class="text-gray-700 mb-4">Accédez aux meilleures universités américaines avec notre assistance.</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:blue-600">Postuler</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">150K</div>
+      </div>
+
+
+      <!-- card 5 -->
+
+
+       <div class=" relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all ">
+        <img src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Um95YXVtZSUyMFVuaXxlbnwwfHwwfHx8MA%3D%3D" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Royaume-Uni</h2>
+          <p class="text-gray-700 mb-4">Naviguez sereinement dans le processus d’admission au Royaume-Uni.</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:blue-600">Postuler</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">150K</div>
+      </div>
+
+
+      <!-- card 6 -->
+
+
+       <div class=" relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all ">
+        <img src="https://plus.unsplash.com/premium_photo-1689805586474-e59c51f38254?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c3Vpc3NlfGVufDB8fDB8fHww" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Allemagne</h2>
+          <p class="text-gray-700 mb-4">Préparez votre inscription en Allemagne avec notre expertise.</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:blue-600">Postuler</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">150K</div>
+      </div>
+
+
+      <!-- card 7 -->
+
+
+       <div class=" relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all ">
+        <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fFN1aXNzZXxlbnwwfHwwfHx8MA%3D%3D" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Suisse</h2>
+          <p class="text-gray-700 mb-4">Facilitez votre préinscription en Suisse avec notre accompagnement sur mesure.</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:blue-600">Postuler</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">150K</div>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ################## -->
+<!-- Infos -->
+<!-- ################## -->
+
+  <section id="info" class="bg-slate-900 text-white">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+        <div class="order-1 md:order-2">
+          <!-- <img src="https://images.unsplash.com/photo-1611693196679-c1f358840cc6?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="w-full h-auto rounded-lg shadow-lg"> -->
+           <img src="dg.jpg" alt="" srcset="">
+        </div>
+        <div class="order-2 md:order-1  ">
+          <h2 class="text-4xl text-red-600 uppercase font-black mb-2">Á propos</h2>
+          <p class="text-lg mb-4 leading-[3rem] ">
+            <span class="before:block before:absolute before:-inset-0 px-2 before:-skew-y-3 relative inline-block  before:bg-red-800 ">
+              <span class="relative text-white">Sylla Consulting</span>
+            </span>
+            
+            
+           votre partenaire de confiance pour des voyages inoubliables. Nous facilitons votre pré-inscription et vous accompagnons à chaque étape de votre aventure.
+
+            Que vous soyez à la recherche d’une escapade détente, d’un voyage d’affaires ou d’une exploration culturelle, notre équipe met tout en œuvre pour vous offrir une expérience sur mesure.
+            
+            Grâce à notre expertise et à notre réseau de partenaires, nous vous proposons des solutions adaptées à vos besoins et un service de qualité pour rendre vos déplacements plus simples et agréables.
+          
+            Faites confiance à 
+            <span class="before:block before:absolute before:-inset-0 px-2 before:-skew-y-3 relative inline-block  before:bg-red-800 ">
+              <span class="relative text-white">Sylla Consulting</span>
+            </span>
+             pour donner vie à vos projets de voyage en toute sérénité !</p>
+
+            <button class="bg-red-500 text-white px-6 py-3 rounded-full font-semibold animate-pulse">En savoir plus</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ################## -->
+   <!-- Contact -->
+  <!-- ################## -->
+
+  <section id="contact" class="px-4 py-12 contact-bg bg-fixed bg-center bg-cover">
+     <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg bg-opacity-25">
+      <h2 class="text-4xl text-4xl text-red-600 uppercase font-black mb-2 text-center">Contactez Nous</h2>
+      <p class="text-lg text-gray-600 text-center nb-12">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+      <form action="#" class="space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Nom</label>
+          <input type="text" id="name" class="mt-1 block w-full p-3 border borde-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
+
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="text" id="email" class="mt-1 block w-full p-3 border borde-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
+
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">message</label>
+          <textarea type="text" id="message" class="mt-1 block w-full p-3 border borde-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
+            </textarea>
+
+        </div>
+        <div class="text-center">
+          <button type="submit" class="w-full md:w-auto inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+            Envoyer
+          </button>
+        </div>
+        
+      </form>
+     </div>
+  </section>
+
+<!-- ################## -->
+ <!-- Footer -->
+<!-- ################## -->
+
+<footer class="bg-gray-900 text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">Contactez-nous</h3>
+        <p class="text-gray-400">Adress: Guediawaye ,round pont Mor Fadam,Dakar </p>
+        <p class="text-gray-400"> Telephone : 33 943 34 43 / +221 77 456 34 12</p>
+        <p class="text-gray-400"> Email : contact@gmail.com </p>
+
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Liens utiles</h3>
+        <ul class="space-y-2">
+          <li><a href="#acceuil" class="text-gray-400 hover:text-white">Acceuil</a></li>
+          <li><a href="#info" class="text-gray-400 hover:text-white">Á propos</a></li>
+          <li><a href="#galerie" class="text-gray-400 hover:text-white">Services</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Suiver-nous</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="bg-white rounded-full w-8 h-8 flex justify-center items-center hover:bg-gray-400"><box-icon type='logo' name='instagram-alt'></box-icon></a>
+          <a href="#" class="bg-white rounded-full w-8 h-8 flex justify-center items-center hover:bg-gray-400"><box-icon type='logo' name='twitter'></box-icon></a>
+          <a href="#" class="bg-white rounded-full w-8 h-8 flex justify-center items-center hover:bg-gray-400"><box-icon type='logo' name='linkedin-square'></box-icon></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-gray-400 mt-8">
+      &copy; Aly Mar ngom - 2024 - Tous droits réservés
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="app.js"></script>
+  
+</body>
+</html>
